@@ -15,7 +15,7 @@ export class AppComponent {
   personne: Personne = new Personne(1, 'El azzouzi', 'Hassan');
   version: number = 17.07;
   tab: number[] = [2, 3, 5, 8];
-  notes: number[] = [19, 9.5, 16, 10, 14, 13.5];
+  notes: number[] = [19, 17.5, 16, 10, 14, 13.5];
   constructor() {
 
   }
