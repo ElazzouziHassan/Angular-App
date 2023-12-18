@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Personne } from './classes/personne';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Angular App | Tutorial';
-  personne: Personnne = new Personne(1, 'El azzouzi', 'Hassan');
+  personne: Personne = new Personne(1, 'El azzouzi', 'Hassan');
 }
