@@ -5,11 +5,24 @@
   <li><span>Prenom:</span> {{ personne.prenom }}</li>
 </ul> -->
 
-{{ personne | json }}
+<!-- {{ personne | json }} -->
 
-<ul>
+<!-- <ul>
   <li *ngFor="let elt of tab; let i = index; let isfirst = first; let isLast = last">
     {{ i }} : {{ elt }} : {{ isfirst }} : {{ isLast }}
   </li>
+</ul> -->
+
+<ul>
+  <ng-container *ngFor="let elt of tab;">
+    <li *ngIf="elt % 2 != 0; else sinon">
+      {{ elt }} est Impair
+    </li>
+    <ng-template #sinon>
+      <li>
+        {{ elt }} est pair
+      </li>
+    </ng-template>
+  </ng-container>
 </ul>
 
