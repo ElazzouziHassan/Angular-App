@@ -11,4 +11,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Angular App | Tutorial';
+  personne: Personnne = new Personne(1, 'El azzouzi', 'Hassan');
 }
