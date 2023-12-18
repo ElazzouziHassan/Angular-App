@@ -13,7 +13,7 @@
   </li>
 </ul> -->
 
-<ul>
+<!-- <ul>
   <ng-container *ngFor="let elt of tab;">
     <li *ngIf="elt % 2 != 0; else sinon">
       {{ elt }} est Impair
@@ -24,5 +24,22 @@
       </li>
     </ng-template>
   </ng-container>
-</ul>
+</ul> -->
+
+<ng-container *ngFor="let note of notes">
+  <div [ngSwitch]="true" >
+    <ng-container *ngSwitchCase="note < 10">
+      <span [ngStyle]="{background: 'red'}">échec</span>
+    </ng-container>
+    <ng-container *ngSwitchCase="note >= 10 && note < 13">
+      <span [ngStyle]="{background: 'orange'}">moyen</span>
+    </ng-container>
+    <ng-container *ngSwitchCase="note >= 13 && note < 15">
+      <span [ngStyle]="{background: 'yellow'}">bien</span>
+    </ng-container>
+    <ng-container *ngSwitchCase="note >= 15">
+      <span [ngStyle]="{background: 'green'}">trés bien</span>
+    </ng-container>
+  </div>
+</ng-container>
 
