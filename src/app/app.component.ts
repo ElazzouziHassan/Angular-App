@@ -2,24 +2,24 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Personne } from './classes/personne';
+import { MenuComponent } from './component/menu/menu.component';
+import { AdresseComponent } from './component/adresse/adresse.component';
+import { StagiaireComponent } from './component/stagiaire/stagiaire.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [
+    CommonModule, 
+    RouterOutlet,
+    MenuComponent,
+    AdresseComponent,
+    StagiaireComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Angular App | Tutorial';
-  personne: Personne = new Personne(1, 'El azzouzi', 'Hassan');
-  version: number = 17.07;
-  tab: number[] = [2, 3, 5, 8];
-  notes: number[] = [19, 17.5, 16, 10, 14, 13.5];
-  constructor() {
-
-  }
-  sayHello() {
-    return 'Hello Angular';
-  }
+  
 }
