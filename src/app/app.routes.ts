@@ -14,24 +14,24 @@ import { ChildBComponent } from './component/heroseComponent/child-b/child-b.com
 
 export const routes: Routes = [
   {path:'', redirectTo: 'heroes', pathMatch: 'full'},
-  {path:'home', component: HomeComponent},
-  {path:'crisis', component: CrisisListComponent},
+  {path:'home', title: ' Home ', component: HomeComponent},
+  {path:'crisis', title: ' Crisis ', component: CrisisListComponent},
   {
-    path:'heroes', component: HeroesListComponent,
+    path:'heroes', title: ' Heores ', component: HeroesListComponent,
     children: [
       {
-        path: 'child-a', component: ChildAComponent
+        path: 'child-a', title: 'Heores | Child A ', component: ChildAComponent
       },
       {
-        path: 'child-b', component: ChildBComponent
+        path: 'child-b', title: 'Heores | Child B ', component: ChildBComponent
       }
     ]
   },
-  {path:'stagiaire', component: StagiaireComponent},
-  {path:'adresse', component: AdresseComponent},
-  {path:'services', component: ServicesComponent},
-  {path:'about', component: AboutComponent},
-  {path:'contact', component: ContactComponent},
+  {path:'stagiaire', title: ' Stagiaires ', component: StagiaireComponent},
+  {path:'adresse', title: ' Adresse ', component: AdresseComponent},
+  {path:'services', title: ' Services ', component: ServicesComponent},
+  {path:'about', title: ' About ', component: AboutComponent},
+  {path:'contact', title: ' Contact ', component: ContactComponent},
   {path:'**', component: PageNotFoundComponent},
 ];
 
