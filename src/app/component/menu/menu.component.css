@@ -12,3 +12,8 @@ ul{
   list-style: none;
   gap: 20px;
 }
+.btn{
+  color: rgb(9, 57, 41);
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
