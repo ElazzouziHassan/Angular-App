@@ -9,6 +9,7 @@ import { AboutComponent } from './component/about/about.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ServicesComponent } from './component/services/services.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ import { FooterComponent } from './component/footer/footer.component';
     ServicesComponent,
     FooterComponent,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    HomeComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
